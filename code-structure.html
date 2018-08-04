@@ -68,9 +68,16 @@
                         </li>
 
                         <li>
-                            <a href="code-structure.html">
-                                <i class="ti-layout-grid4"></i> <span> Code Structure </span>
+                            <a href="javascript: void(0);">
+                                <i class="ti-layout-grid4"></i> <span> Code Structure </span> <span class="menu-arrow"></span>
                             </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="code-structure.html#main">Main Solution</a></li>
+                                <li><a href="code-structure.html#web">QuizbeePlus.Web</a></li>
+                                <li><a href="code-structure.html#data">QuizbeePlus.Data</a></li>
+                                <li><a href="code-structure.html#entities">QuizbeePlus.Entities</a></li>
+                                <li><a href="code-structure.html#services">QuizbeePlus.Services</a></li>
+                            </ul>
                         </li>
 
                         <li>
@@ -106,11 +113,127 @@
 
                         <div class="row">
                             <div class="col-sm-12">
-                                <h4 class="header-title m-t-0 m-b-20">Home</h4>
+                                <h4 class="header-title m-t-0 m-b-20">Code Structure</h4>
+                                    <p>
+                                        Quizbee is developed in modular fashion. In this section we will go into details of each module and inner workings of strcuture.
+                                    </p>
+                                    
+                                    <h4 class="font-16 mb-3 mt-3">
+                                        Project Module Structure
+                                    </h4>
+                                    <p class="mt-2">
+                                        There are four projects in main solution file as follows.                                        
+                                    </p>
+                                    <div class="">
+                                        <div class="center-page row">
+                                            <img src="assets/images/Quizbee-Solution-Architecture.png" class="rounded img-fluid img-thumbnail bg-info" alt="QuizbeePlus Solution Architecture">
+                                        </div>
+                                    </div>
 
-                                    <h1>Thanks</h1>
-                                    <p class="text-muted">First of all thank you for purchasing Quizbee. I am dedicated to making this project as easy and understandable to use as I can and hope you have as much fun using it as I did developing it! Your comments are important to me because they help in improving my projects. If you have any questions concerning my projects, please send an email on sajjadarifgul@gmail.com or send a message from contact us page on my website www.sajjadgul.com or you can call me at +92 3320307817. Again, thank you for your purchase.</p>
-
+                                    <h5 class="font-16 mb-3 mt-3" id="web">1. QuizbeePlus</h5>
+                                    <p>This is the main ASP .Net MVC Project in the solution. Users will be interacting with this module. It has the following architecture.</p>
+                                    <div class="">
+                                        <div class="center-page row">
+                                            <img src="assets/images/Quizbee-Web-Architecture.png" class="rounded img-fluid img-thumbnail bg-info" alt="QuizbeePlus Web Architecture">
+                                        </div>
+                                    </div>
+                                    <h6 class="font-16 mb-3 mt-3">1.a Controllers</h6>
+                                    <p>
+                                        There are 9 main Controllers in Quizbee as follows.
+                                        <ol>
+                                            <li>
+                                                Base Controller
+                                                <p>This is a simple controller which act as parent controller for most of other controllers. Other controllers are inherited from it. This controller has implementation related to Exception Handling, User Authorization and Unauthorized page redirection mechanism.</p>
+                                            </li>
+                                            <li>
+                                                Account Controller
+                                                <p>This controller handles everything related to account registeration, login and forget password, social media account registeration functionalities etc.</p>
+                                            </li>
+                                            <li>
+                                                Manage Controller
+                                                <p>This controller handles everything related to user profile functionalities etc.</p>
+                                            </li>
+                                            <li>
+                                                Home Controller
+                                                <p>This controller is only concerned with Home page. It has one Index action which displays most recently added quizzes on the homepage.</p>
+                                            </li>
+                                            <li>
+                                                Quiz Controller
+                                                <p>This controller handles functionalities related to Quiz such as creating new quizzes, listing user quizzes, updating quizzes and deleting quizzes.</p>
+                                            </li>
+                                            <li>
+                                                Question Controller
+                                                <p>This controller handles functionalities related to Questions and options such as creating, listing, updating and deleting quiz questions and options in questions.</p>
+                                            </li>
+                                            <li>
+                                                Attempt Quiz Controller
+                                                <p>As the name suggest this controller handles everything related to User Quiz Attempts.</p>
+                                            </li>
+                                            <li>
+                                                Control Panel Controller
+                                                <p>This controller is concerned with Admin actions.</p>
+                                            </li>
+                                            <li>
+                                                Shared Controller
+                                                <p>Some of the shared actions used in multiple areas of project such as Uplaoading Image etc is added in shared controller.
+                                            </li>
+                                        </ol>
+                                    </p>
+                                    <p>
+                                        <strong>Authorization Mechanism in Controllers</strong>
+                                        <br/>
+                                        As most of the Quizbee pages require authorization, we have used MVC authorize action filter. You will not find it on each controller becuase the controllers have been inherited from Base Controller. You can change authorization mechanism in Base controller and it will be update all over project controllers.
+                                    </p>
+                                    <h6 class="font-16 mb-3 mt-3">1.b Styles, Scripts, Fonts and Other Files</h6>
+                                    <p>
+                                        All the files related to Styles, JavaScript/jQuery, SASS, Less, Fonts and Images are stored in Content folder. Third party plugins and libraries are stored in plugins subfolder. 
+                                    </p>
+                                    <div class="">
+                                        <div class="center-page row">
+                                            <img src="assets/images/Quizbee-Contents-Folder-Architecture.png" class="rounded img-fluid img-thumbnail bg-info" alt="QuizbeePlus Contents Architecture">
+                                        </div>
+                                    </div>
+                                    <h6 class="font-16 mb-3 mt-3">1.c Views</h6>
+                                    <p>
+                                        All controllers have their own separate view folders as shown in below screenshot. Partial Views have preceeding underscore in their name.
+                                    </p>
+                                    <div class="">
+                                        <div class="center-page row">
+                                            <img src="assets/images/Quizbee-Views-Folder-Architecture.png" class="rounded img-fluid img-thumbnail bg-info" alt="QuizbeePlus Views Architecture">
+                                        </div>
+                                    </div>
+                                    <h6 class="font-16 mb-3 mt-3">1.d ViewModels</h6>
+                                    <p>ViewModels have their own separate ViewModels folder. Each file in ViewModels folder contain many ViewModel classes.</p>
+                                    <h6 class="font-16 mb-3 mt-3">1.e Error Pages</h6>
+                                    <p>
+                                        Quizbee also implements custom error pages which you can find in the main folder. Local development does not show these error pages as it is recommended to only be shown on the released environment. You can change this setting in web.config file.
+                                        <br/>
+                                        <i>Learn more about Error Pages in MVC in this <a href="http://benfoster.io/blog/aspnet-mvc-custom-error-pages" target="_blank">Link</a>.</i>
+                                    </p>
+                                    <h5 class="font-16 mb-3 mt-3" id="data">2. QuizbeePlus.Data</h5>
+                                    <p>This module is a Class Library Project in the main solution. This is responsible for handling everything related to Database.</p>
+                                    <div class="">
+                                        <div class="center-page row">
+                                            <img src="assets/images/Quizbee-Data-Architecture.png" class="rounded img-fluid img-thumbnail bg-info" alt="QuizbeePlus Data Architecture">
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Quizbee uses Entity Framework Code First Migrations to create database. QuizbeeContext class is derived from DbContext class of Entity Framework. Read more details of Database creation/setup etc in Setup section.
+                                    </p>
+                                    <h5 class="font-16 mb-3 mt-3" id="data">3. QuizbeePlus.Entities</h5>
+                                    <p>This module is also Class Library Project in the main solution. This project contain all the business entities/classes. This is referenced in all other projects in the main solution.</p>
+                                    <div class="">
+                                        <div class="center-page row">
+                                            <img src="assets/images/Quizbee-Entities-Architecture.png" class="rounded img-fluid img-thumbnail bg-info" alt="QuizbeePlus Entities Architecture">
+                                        </div>
+                                    </div>
+                                    <h5 class="font-16 mb-3 mt-3" id="data">4. QuizbeePlus.Services</h5>
+                                    <p>This module is a Class Library Project which act as intermediary between database module and main web module.</p>
+                                    <div class="">
+                                        <div class="center-page row">
+                                            <img src="assets/images/Quizbee-Services-Architecture.png" class="rounded img-fluid img-thumbnail bg-info" alt="QuizbeePlus Services Architecture">
+                                        </div>
+                                    </div>
                                     <div class="clearfix"></div>
                             </div>
                         </div>
