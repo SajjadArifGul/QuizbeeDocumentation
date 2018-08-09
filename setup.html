@@ -37,7 +37,7 @@
                     <!-- Left Menu Start -->
                     <ul class="metismenu" id="side-menu">
                         <li>
-                            <a href="home.html">
+                            <a href="index.html">
                                 <i class="ti-home"></i><span> Home </span>
                             </a>
                         </li>
@@ -68,9 +68,16 @@
                         </li>
 
                         <li>
-                            <a href="code-structure.html">
-                                <i class="ti-layout-grid4"></i> <span> Code Structure </span>
+                            <a href="javascript: void(0);">
+                                <i class="ti-layout-grid4"></i> <span> Code Structure </span> <span class="menu-arrow"></span>
                             </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="code-structure.html#main">Main Solution</a></li>
+                                <li><a href="code-structure.html#web">QuizbeePlus.Web</a></li>
+                                <li><a href="code-structure.html#data">QuizbeePlus.Data</a></li>
+                                <li><a href="code-structure.html#entities">QuizbeePlus.Entities</a></li>
+                                <li><a href="code-structure.html#services">QuizbeePlus.Services</a></li>
+                            </ul>
                         </li>
 
                         <li>
@@ -106,11 +113,34 @@
 
                         <div class="row">
                             <div class="col-sm-12">
-                                <h4 class="header-title m-t-0 m-b-20">Home</h4>
-
-                                    <h1>Thanks</h1>
-                                    <p class="text-muted">First of all thank you for purchasing Quizbee. I am dedicated to making this project as easy and understandable to use as I can and hope you have as much fun using it as I did developing it! Your comments are important to me because they help in improving my projects. If you have any questions concerning my projects, please send an email on sajjadarifgul@gmail.com or send a message from contact us page on my website www.sajjadgul.com or you can call me at +92 3320307817. Again, thank you for your purchase.</p>
-
+                                <h4 class="header-title m-t-0 m-b-20">Setup</h4>
+                                <p>
+                                    Setting up Quizbee is very simple. After extracting, you can open project solution file in Visual Studio. We recommend to use Visual Studio 2017. 
+                                </p>
+                                    <h5 class="font-16 mb-3 mt-3">Database</h5>
+                                    <p class="mt-2">
+                                        Quizbee uses Entity Framework Code first approach to create database. You don't need any SQL scripts to create database and columns. Follow below steps to setup database. Just change the Connection String in Web.config according to to your database server instance. Quizbee will automatically create database tables and relationships with the help of entity framework. 
+                                    </p>
+                                    <h6>For Local Host</h6>
+                                    <p>When you are trying to open Quizbee in your local development environemnt.</p>
+                                    <ol>
+                                        <li>Get the name of SQL server instances by typing <code>&nbsp;sqllocaldb i&nbsp;</code> in your command prompt.
+                                            <br/><img src="assets/images/Know-Sql-Instances.png" class="rounded img-fluid img-thumbnail bg-info" alt="SQL Server Instances"></li>
+                                        <li>Open web.config file from QuizbeePlus project and search for QuizbeePlusConnection in connectionStrings tag.
+                                            <br/><img src="assets/images/Quizbee-Web-Config.png" class="rounded img-fluid img-thumbnail bg-info" alt="Quizbee Web.config"></li>
+                                        <li>Change <code>&nbsp;MSSQLLocalDB&nbsp;</code> with your preferred server instance name.</li>
+                                        <li>Open Quizbee in browser by pressing <code>Ctrl+F5</code>. It'll take a moment when loading first time to create database and relationships.</li>
+                                    </ol>
+                                    <h6>For Remote/Release</h6>
+                                    <p>When you are publishing Quizbee.</p>
+                                    <ol>
+                                        <li>Create a new empty database on your server.</li>
+                                        <li>Open web.config file from QuizbeePlus project and search for QuizbeePlusConnection in connectionStrings tag.
+                                            <br/><img src="assets/images/Quizbee-Web-Config.png" class="rounded img-fluid img-thumbnail bg-info" alt="Quizbee Web.config"></li>
+                                        <li>Change <code>&nbsp;QuizbeePlusConnection&nbsp;</code> with your database connection string.</li>
+                                        <i>Deploy Quizbee to your server. We recommend to use Microsoft Azure or Amazon AWS but you can host it on any server.</i>
+                                        <li>Open Quizbee in browser by pressing <code>Ctrl+F5</code>. It'll take a moment when loading first time to create database and relationships.</li>
+                                    </ol>
                                     <div class="clearfix"></div>
                             </div>
                         </div>
