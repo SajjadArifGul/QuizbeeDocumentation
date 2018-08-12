@@ -114,6 +114,13 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <h4 class="header-title m-t-0 m-b-20">New Question Page</h4>
+                            <h5 class="font-16 mb-3 mt-3">Details</h5>
+                            <p>On this page user can add a question to a quiz. Please note that the user must be referred from a quiz page because a question can only be added to a specific quiz. You can know this by looking at the URL of this page. It contains Quiz ID.</p>
+                            <p>Initially this page has 3 fields. One for Question Title where user adds the title of question, second field for Correct Option where user has to write the correct option and third for adding other options. To add more than one correct or other options user must click on Add Correct Option and Add Option button respectively. With this approach user can add as many options as he/she wants.</p>
+                            <p>If Quiz Type is of Image, it will show image upload option instead of simple text box for options.</p>
+                            <p>Another important thing to remember is that the Order of these options does not matter. Every time this question gets displayed to user, the options will be shuffled. </p>
+                            <p>Once all the required fields are entered the question will be added to Quiz and the page will reload to add another question to this quiz.</p>
+                            <p>There is also a direct link to see all questions from this quiz in the tab header.</p>
                             <h5 class="font-16 mb-3 mt-3">URL</h5>
                             <p>
                                 /questions/{QUIZ-ID}/new
@@ -124,12 +131,7 @@
                                     <img src="https://i.imgur.com/2Yspayg.png" class="rounded img-fluid img-thumbnail bg-info" alt="New Questions Page">
                                 </div>
                             </div>
-                            <h5 class="font-16 mb-3 mt-3">Details</h5>
-                            <p>On this page user can add a question to a quiz. Please note that the user must be referred from a quiz page because a question can only be added to a specific quiz. You can know this by looking at the URL of this page. It contains Quiz ID.</p>
-                            <p>Initially this page has 3 fields. One for Question Title where user adds the title of question, second field for Correct Option where user has to write the correct option and third for adding other options. To add more than one correct or other options user must click on Add Correct Option and Add Option button respectively. With this approach user can add as many options as he/she wants.</p>
-                            <p>Another important thing to remember is that the Order of these options does not matter. Every time this question gets displayed to user, the options will be shuffled. </p>
-                            <p>Once all the required fields are entered the question will be added to Quiz and the page will reload to add another question to this quiz.</p>
-                            <p>There is also a direct link to see all questions from this quiz in the tab header</p>
+                            
                             <div class="clearfix"></div>
                         </div>
                     </div>

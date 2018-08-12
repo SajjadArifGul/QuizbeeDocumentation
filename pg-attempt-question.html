@@ -114,6 +114,15 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <h4 class="header-title m-t-0 m-b-20">Attempt Question Page</h4>
+                                <h5 class="font-16 mb-3 mt-3">Details</h5>
+                                    <p>As soon as the user clicks on Start Quiz button on Attemp Quiz Page, the quiz timer is started and question is loaded on the same page via Ajax calls. If the Quiz has Question timer enabled, it will also show a question timer above question title which mean the Question must be answered within specified time.</p>
+                                    <p class="text-danger">The order of options will be randomized each time the question is displayed.</p>
+                                    <p>User has two actions to perform on this page.</p>
+                                    <ol>
+                                        <li>Select suitable option(s) and submit the answer.</li>
+                                        <li>Skip question. This will prompt a confirmation message, which if user clicked Yes, the question will be skipped.</li>
+                                    </ol>
+                                    <p>After submitting or skipping question, the next question will be displayed to the user on the same page. This will continue until either all the questions are attempted or the timer is up. When that happens, the detailed quiz results page will be displayed to the user.</p>                                    
                                     <h5 class="font-16 mb-3 mt-3">URL</h5>
                                     <p>
                                         <i>Loads as Ajax Request within Attempt Quiz Page</i>
@@ -125,11 +134,6 @@
                                             <img src="https://i.imgur.com/qdl3xDB.png" class="rounded img-fluid img-thumbnail bg-info" alt="Attempt Question Page">
                                         </div>
                                     </div>
-                                    
-                                    <h5 class="font-16 mb-3 mt-3">Details</h5>
-                                    <p>As soon as the user clicks on Start Quiz button, the quiz timer is started and question is loaded on the same page via Ajax calls. </p>
-                                    <p>The order of options will be randomized each time the question is displayed.</p>
-                                    <p>After selecting any option, the user will click on submit the answer button. The answer will be submitted via Ajax and the next question will be displayed. This will continue until either all the questions are attempted or the timer is up. When that happens, the detailed quiz results page will be displayed to the user.</p>
                                     <div class="clearfix"></div>
                             </div>
                         </div>

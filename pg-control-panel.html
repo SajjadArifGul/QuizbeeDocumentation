@@ -114,9 +114,20 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <h4 class="header-title m-t-0 m-b-20">Control Panel Page</h4>
+                                <h5 class="font-16 mb-3 mt-3">Details</h5>
+                                    <p class="mt-2">
+                                        This is Control Panel Page. It is only accessible by the users with the <code>Administrator</code> role. The link for this page is shown to Administrator users in user menu when the click username in the top menu bar. 
+                                    </p>
+                                    <p>This page has four following tabs. Each tab is defined in their own pages.</p>
+                                    <ol>
+                                        <li><a href="pg-users-control-panel.html">Users Tab</a></li>
+                                        <li><a href="pg-roles-control-panel.html">Roles Tab</a></li>
+                                        <li><a href="pg-quizzes-control-panel.html">Quizzes Tab</a></li>
+                                        <li><a href="pg-results-control-panel.html">Quiz Attempts Tab</a></li>
+                                    </ol>
                                     <h5 class="font-16 mb-3 mt-3">URL</h5>
                                     <p>
-                                        /control-panel
+                                        /control-panel/
                                     </p>
                                     <h5 class="font-16 mb-3 mt-3">Screenshot</h5>
                                     <div class="">
@@ -124,11 +135,6 @@
                                             <img src="https://i.imgur.com/tFmckgu.png" class="rounded img-fluid img-thumbnail bg-info" alt="Quizbee Control Panel Page">
                                         </div>
                                     </div>
-                                    
-                                    <h5 class="font-16 mb-3 mt-3">Details</h5>
-                                    <p class="mt-2">This is the home page. Home page will list down the most recent 9 quizzes on homepage. This means any quizzes that have the most recent modified on date in database will be listed here. If there are more than 9 quizzes in database, home page will also show pagination.</p>
-                                    <p>Each quiz list item will have quiz title, a description of maximum 300 characters, number of questions and a direct link to attempt quiz. If the quiz type is of image, it will show image icon in quiz header.</p>
-                                    <p>Home page also have a basic description of the Quizbee Project above the quizzes list which can be modified from Home controller in Index action. Links to creating a new quiz and sharing on Facebook and Twitter and see morequizzes are also there.</p>
                                     <div class="clearfix"></div>
                             </div>
                         </div>

@@ -129,7 +129,9 @@
                                         <li>Open web.config file from QuizbeePlus project and search for QuizbeePlusConnection in connectionStrings tag.
                                             <br/><img src="assets/images/Quizbee-Web-Config.png" class="rounded img-fluid img-thumbnail bg-info" alt="Quizbee Web.config"></li>
                                         <li>Change <code>&nbsp;MSSQLLocalDB&nbsp;</code> with your preferred server instance name.</li>
-                                        <li>Open Quizbee in browser by pressing <code>Ctrl+F5</code>. It'll take a moment when loading first time to create database and relationships.</li>
+                                        <li>Open Tools>Nuget Packager Manager>Nuget Package Manager Console window in Visual Studio</li>
+                                        <li>Run <code>&nbsp;Update-Database&nbsp;</code> command in this window. It is Entity Framework Migration command. It'll take a moment to create database and relationships.</li>
+                                        <li>Open Quizbee in browser by pressing <code>Ctrl+F5</code>.</li>
                                     </ol>
                                     <h6>For Remote/Release</h6>
                                     <p>When you are publishing Quizbee.</p>
@@ -140,7 +142,37 @@
                                         <li>Change <code>&nbsp;QuizbeePlusConnection&nbsp;</code> with your database connection string.</li>
                                         <i>Deploy Quizbee to your server. We recommend to use Microsoft Azure or Amazon AWS but you can host it on any server.</i>
                                         <li>Open Quizbee in browser by pressing <code>Ctrl+F5</code>. It'll take a moment when loading first time to create database and relationships.</li>
+                                    </ol>                                    
+                                    <h5 class="font-16 mb-3 mt-3">Deafult Roles and User</h5>
+                                    <p class="mt-2">
+                                        Quizbee has two roles by default. These roles are seeded to database when database is first created. It is defined in the <code>Seed</code> method in Configuration.cs file defined in Migrations folder in Quizbee.Data project.
+                                    </p>
+                                    <ol>
+                                        <li>Administrator</li>
+                                        <li>User</li>
                                     </ol>
+                                    <p>
+                                        Quizbee also has a default Adminstrator user in the same Seed method with the following details.
+                                    </p>
+                                    <ol>
+                                        <li>Username: <code>admin@email.com</code></li>
+                                        <li>Email: <code>admin</code></li>
+                                        <li>Password: <code>admin</code></li>
+                                    </ol>
+                                    <strong class="text-danger">Remember to change these admin credentials after deploying Quizbee.</strong>
+                                    <h5 class="font-16 mb-3 mt-3">Social Media Logins</h5>
+                                    <p class="mt-2">
+                                        Quizbee also provides social media login and authorization for users on login and register page. Since we are using ASP .Net MVC, It is very easy to setup. 
+                                    </p>
+                                    <p>
+                                        Currently Facebook and Google Plus social logins are setup in Quizbee but following <a href="https://docs.microsoft.com/en-us/aspnet/mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on" target="_blank">steps in this link</a> you can easily setup Twitter, LinkedIn and Github logins. Change your relative app secret keys according to above article in <code>Startup.Auth.cs</code> file in AppStart folder in Quizbee. 
+                                    </p>
+                                    <strong class="text-danger">Social Media websites only allow succesfull login on HTTPS enabled websites so you must configure your website server for SSL certificates. On Local mechine, Quizbee is configured to use HTTPS with IIS certificates.</strong>
+                                    <div class="">
+                                        <div class="center-page row">
+                                            <img src="assets/images/Quizbee-social-logins.png" class="rounded img-fluid img-thumbnail bg-info" alt="Quizbee Home Page">
+                                        </div>
+                                    </div>
                                     <div class="clearfix"></div>
                             </div>
                         </div>

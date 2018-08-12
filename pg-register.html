@@ -114,6 +114,16 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <h4 class="header-title m-t-0 m-b-20">Register Page</h4>
+                                <h5 class="font-16 mb-3 mt-3">Details</h5>
+                                    <p class="mt-2">
+                                        This is new account registeration page where user can register on Quizbee. All but a few of the Quizbee pages uses Authentication so a user must be registered and logged in to perform actions such as creating or attempting quizzes. A unique Username, Email and matching Passwords are required to successfully create account. By default Quizbee does not enforec strong password creation but this can be changed by changing properties in <code>QuizbeeUserManager.cs</code> file in Quizbee.Data project.
+                                    </p>
+                                    <p>
+                                        Quizbee also provides options to register via your social media account. Facebook and Google Plus are supported out of the box but you can add other social media accounts for this purpose. Refer to Social Media Section in Setup Page.
+                                    </p>
+                                    <p>
+                                        Existing account login link is also provided below the section.
+                                    </p>
                                     <h5 class="font-16 mb-3 mt-3">URL</h5>
                                     <p>
                                         /register
@@ -125,10 +135,6 @@
                                         </div>
                                     </div>
                                     
-                                    <h5 class="font-16 mb-3 mt-3">Details</h5>
-                                    <p class="mt-2">This is the home page. Home page will list down the most recent 9 quizzes on homepage. This means any quizzes that have the most recent modified on date in database will be listed here. If there are more than 9 quizzes in database, home page will also show pagination.</p>
-                                    <p>Each quiz list item will have quiz title, a description of maximum 300 characters, number of questions and a direct link to attempt quiz. If the quiz type is of image, it will show image icon in quiz header.</p>
-                                    <p>Home page also have a basic description of the Quizbee Project above the quizzes list which can be modified from Home controller in Index action. Links to creating a new quiz and sharing on Facebook and Twitter and see morequizzes are also there.</p>
                                     <div class="clearfix"></div>
                             </div>
                         </div>
