@@ -10,12 +10,15 @@
         <link rel="shortcut icon" href="files/assets/images/favicon.ico">
     </head>
     <body>
-        <p>JavaScript needed for redirection to inner documentation page.</p>
+        <p><strong>Note:</strong> You will be redirected to the Quizbee Online Demo in 3 seconds. Sometimes CodeCanyon is unable to show Quizbee demo in demo preview page. Click on the below link if you are not redirected to http://quizbee.somee.com/.</p>
+        <a href="http://quizbee.somee.com/" target="_blank" id="quizbeeDemoLink">http://quizbee.somee.com/</a>
         <script src="files/assets/js/jquery.min.js"></script>
+        
         <script type="text/javascript">
-            $(document).ready(function(){
-                window.location.href = "files/index.html";
-            });
+            function pageRedirect() {
+                window.location.replace("http://quizbee.somee.com/");
+            }      
+            setTimeout("pageRedirect()", 3000);
         </script>
     </body>
 </html>
