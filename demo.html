@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Quizbee Documentation - Easily Create And Attempt Quizzes</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="files/assets/images/favicon.ico">
-    </head>
-    <body>
-        <p><strong>Note:</strong> You will be redirected to the Quizbee Online Demo in 3 seconds. Sometimes CodeCanyon is unable to show Quizbee demo in demo preview page. Click on the below link if you are not redirected to http://quizbee.somee.com/.</p>
-        <a href="http://quizbee.somee.com/" target="_blank" id="quizbeeDemoLink">http://quizbee.somee.com/</a>
-        <script src="files/assets/js/jquery.min.js"></script>
-        
-        <script type="text/javascript">
-            function pageRedirect() {
-                window.location.replace("http://quizbee.somee.com/");
-            }      
-            setTimeout("pageRedirect()", 3000);
-        </script>
-    </body>
+   <head>
+      <meta charset="utf-8" />
+      <title>Quizbee Documentation - Easily Create And Attempt Quizzes</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <!-- App favicon -->
+      <link rel="shortcut icon" href="files/assets/images/favicon.ico">
+      <style>
+         div.center {
+         text-align: center;
+         padding: 40px 50px;
+         font-size: 25px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="center">
+         <p><strong>Note:</strong><br/>You will be redirected to the Quizbee Online Demo in 3 seconds. Sometimes CodeCanyon is unable to redirect to Quizbee in demo preview page. Click on the below link if you are not redirected to http://quizbee.somee.com/.</p>
+         <a href="http://quizbee.somee.com/" target="_blank" id="quizbeeDemoLink">http://quizbee.somee.com/</a>
+      </div>
+      <script src="files/assets/js/jquery.min.js"></script>
+      <script type="text/javascript">
+         function pageRedirect() {
+             $("#quizbeeDemoLink").trigger("click");
+             window.open("http://quizbee.somee.com/");
+         }      
+         setTimeout("pageRedirect()", 3000);
+      </script>
+   </body>
 </html>
